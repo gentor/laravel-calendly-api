@@ -3,6 +3,8 @@
 namespace Gentor\Calendly;
 
 use Gentor\Calendly\Api\Client;
+use Gentor\Calendly\Api\EventTypes;
+use Gentor\Calendly\Api\Memberships;
 use Gentor\Calendly\Api\ScheduledEvents;
 use Gentor\Calendly\Api\Users;
 use Gentor\Calendly\Api\Webhooks;
@@ -52,11 +54,27 @@ class CalendlyAPI
     }
 
     /**
+     * @return \Gentor\Calendly\Api\EventTypes
+     */
+    public function eventTypes()
+    {
+        return new EventTypes($this->client);
+    }
+
+    /**
      * @return \Gentor\Calendly\Api\ScheduledEvents
      */
     public function scheduledEvents()
     {
         return new ScheduledEvents($this->client);
+    }
+
+    /**
+     * @return \Gentor\Calendly\Api\Memberships
+     */
+    public function memberships()
+    {
+        return new Memberships($this->client);
     }
 
     /**
