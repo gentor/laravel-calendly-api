@@ -37,6 +37,7 @@ Calendly::users()->get();
 * [Event Types](https://developer.calendly.com/api-docs/b3A6NTkxNDEz-list-user-s-event-types)
 
 ```php
+Calendly::eventTypes()->get();
 Calendly::eventTypes()->forOrganization();
 Calendly::eventTypes()->forUser();
 ```
@@ -44,6 +45,7 @@ Calendly::eventTypes()->forUser();
 * [Scheduled Events](https://developer.calendly.com/api-docs/b3A6NTkxNDEy-list-events)
 
 ```php
+Calendly::scheduledEvents()->get();
 Calendly::scheduledEvents()->forOrganization();
 Calendly::scheduledEvents()->forUser();
 Calendly::scheduledEvents()->invitees();
@@ -53,6 +55,7 @@ Calendly::scheduledEvents()->invitee();
 * [Memberships](https://developer.calendly.com/api-docs/b3A6NTkxNDI0-list-organization-memberships)
 
 ```php
+Calendly::memberships()->get();
 Calendly::memberships()->forOrganization();
 Calendly::memberships()->forUser();
 ```
@@ -60,6 +63,7 @@ Calendly::memberships()->forUser();
 * [Webhooks](https://developer.calendly.com/api-docs/b3A6NTkxNDI2-list-webhook-subscriptions)
 
 ```php
+Calendly::webhooks()->get();
 Calendly::webhooks()->list();
 Calendly::webhooks()->subscribe();
 Calendly::webhooks()->unsubscribe();
