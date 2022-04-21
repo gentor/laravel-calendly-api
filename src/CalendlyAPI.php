@@ -22,7 +22,7 @@ class CalendlyAPI
     protected $config;
 
     /**
-     * @var Client
+     * @var \Gentor\Calendly\Api\Client
      */
     protected $client;
 
@@ -38,11 +38,29 @@ class CalendlyAPI
     }
 
     /**
-     * @return Client
+     * @return \Gentor\Calendly\Api\Client
      */
     public function client()
     {
         return $this->client;
+    }
+
+    /**
+     * @param $personalToken
+     * @param $organizationUri
+     * @return \Gentor\Calendly\CalendlyAPI
+     */
+    public function changeCredentials($personalToken, $organizationUri)
+    {
+        $config = [
+            'personal_token' => $personalToken,
+            'organization_uri' => $organizationUri,
+        ];
+
+        $this->config = $config;
+        $this->client = new Client($config);
+
+        return $this;
     }
 
     /**
