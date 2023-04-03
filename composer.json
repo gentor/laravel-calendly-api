@@ -1,5 +1,5 @@
 {
-    "name": "gentor/laravel-calendly-api",
+    "name": "tpots/laravel-calendly-api",
     "description": "PHP Calendly API (v2) SDK for Laravel",
     "keywords": [
         "laravel",
@@ -15,7 +15,14 @@
             "email": "evgeni.nurkov@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gentor/laravel-calendly-api"
+        }
+    ],
     "require": {
+        "gentor/laravel-calendly-api": "dev",
         "php": "^7",
         "guzzlehttp/guzzle": "^7"
     },
