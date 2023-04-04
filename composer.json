@@ -22,7 +22,6 @@
         }
     ],
     "require": {
-        "gentor/laravel-calendly-api": "dev",
         "php": "^7",
         "guzzlehttp/guzzle": "^7"
     },
