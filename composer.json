@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "php": "^7",
+        "php": "^8",
         "guzzlehttp/guzzle": "^7"
     },
     "autoload": {
